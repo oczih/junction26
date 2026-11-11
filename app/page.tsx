@@ -1,37 +1,21 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React, { useState, useEffect, startTransition } from 'react';
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'motion/react';
+import { Container } from '@/components/layout/container';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
-export default function Page({}) {
-  const [mounted, setMounted] = useState(false)
-  const router = useRouter()
-  
-  useEffect(() => {
-    startTransition(() => {
-      setMounted(true);
-    });
-  }, []);
+export default function SaaSPage() {
 
+  return (
+    <main className="flex-1 overflow-hidden">
 
-  if (!mounted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <span className="text-lg font-medium text-slate-700">Loading the app...</span>
-        </div>
-      </div>
-    );
-  }
-
-
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
-          Moi
-      </div>
-    );
-
+      <h1 className='pt-10 text-center justify-center items-center text-4xl'>
+        This is a boiler
+      </h1>
+    </main>
+  );
 }

@@ -1,4 +1,4 @@
-import mongoose, { Schema, model, Document, Types } from "mongoose";
+import mongoose, { Schema, model, Document } from "mongoose";
 
 export interface EspooUserDocument extends Document {
   _id: mongoose.Types.ObjectId;
@@ -33,10 +33,11 @@ const userSchema = new Schema<EspooUserDocument>({
 
 // JSON transform
 userSchema.set("toJSON", {
-  transform: (doc: EspooUserDocument, ret: Partial<EspooUserDocument>) => {
-    ret.id = ret._id?.toString();
-    delete ret._id;
-    return ret;
+  virtuals: true,
+  transform: (_doc, ret) => {
+    const transformed = ret as unknown as Record<string, unknown>;
+    delete transformed._id;
+    return transformed;
   },
 });
 
