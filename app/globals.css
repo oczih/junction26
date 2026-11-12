@@ -5,10 +5,22 @@
   --foreground: #f5f2f0;
 
   /* Brand Palette */
-  --color-canvas: #0c0c0c;
+  --color-canvas: #090e17;
   --color-umber: #481e14;
   --color-sienna: #9b3922;
   --color-ember: #f2613f;
+
+  /* Casino Dark Palette */
+  --color-dark-900: #0b131e;
+  --color-dark-800: #0e1927;
+  --color-dark-700: #132235;
+  --color-dark-600: #1a2c42;
+  --color-dark-500: #223751;
+  --color-dark-400: #2c4463;
+  --color-dark-300: #3e5c82;
+  --color-dark-200: #94a3b8;
+  --color-dark-100: #cbd5e1;
+  --color-light-000: #ffffff;
 
   /* Elevated Surfaces */
   --color-surface-1: #141211;
@@ -32,6 +44,17 @@
   --color-umber: var(--color-umber);
   --color-sienna: var(--color-sienna);
   --color-ember: var(--color-ember);
+
+  --color-dark-900: var(--color-dark-900);
+  --color-dark-800: var(--color-dark-800);
+  --color-dark-700: var(--color-dark-700);
+  --color-dark-600: var(--color-dark-600);
+  --color-dark-500: var(--color-dark-500);
+  --color-dark-400: var(--color-dark-400);
+  --color-dark-300: var(--color-dark-300);
+  --color-dark-200: var(--color-dark-200);
+  --color-dark-100: var(--color-dark-100);
+  --color-light-000: var(--color-light-000);
 
   --color-surface-1: var(--color-surface-1);
   --color-surface-2: var(--color-surface-2);
